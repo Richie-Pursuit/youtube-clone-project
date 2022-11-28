@@ -14,11 +14,10 @@ function SearchBar({ result, setResult, setErrModal, errModal }) {
 
   let videoURL=`https://www.googleapis.com/youtube/v3/search?part=snippet&q=${searchTitle}&key=${process.env.REACT_APP_API_KEY}`
 
-
     function handleSubmit(e) {
         e.preventDefault();
         if (searchTitle.length === 0) setErrModal(true)
-        if (e.target.value !== "") {
+        if (searchTitle.length !== 0) {
           fetchData(searchTitle);
           setSearchTitle("");
         }
