@@ -1,0 +1,87 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.modalOverlay{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(200, 200, 200, 0.8);
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modalInside{
+    width: 400px;
+    height: 400px;
+    border-radius: 12px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+}
+
+
+.modalInside .title {
+    display: inline-block;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .xButton {
+    display: flex;
+    justify-content: flex-end;
+    
+  }
+
+  .modalInside .body {
+    flex: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.7rem;
+    text-align: center;
+  }
+
+
+
+ .modalInside .body p{
+    color: black;
+  }
+  .modalInside .footer {
+    flex: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modalInside .footer button {
+    width: 150px;
+    height: 45px;
+    margin: 10px;
+    border: none;
+    background-color: cornflowerblue;
+    color: white;
+    border-radius: 8px;
+    font-size: 20px;
+    cursor: pointer;
+  }
+
+  .x{
+    background-color: red;
+    width: 30px;
+    height: 25px;
+  }
+
+  .link{
+    font-size: 15px
+    
+  }
+
+  .body{
+    padding: 100px;
+    display: flex;
+  }

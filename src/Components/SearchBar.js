@@ -1,11 +1,12 @@
 import React from 'react';
 import { useState, useEffect } from "react"
 import VideoCard from './VideoCard';
+import ErrModal from './ErrModal';
 
 
 
 
-function SearchBar({ result, setResult }) {
+function SearchBar({ result, setResult, setErrModal, errModal }) {
    
     
   const [searchTitle, setSearchTitle] = useState("")
@@ -16,15 +17,14 @@ function SearchBar({ result, setResult }) {
 
     function handleSubmit(e) {
         e.preventDefault();
+        if (searchTitle.length === 0) setErrModal(true)
         if (e.target.value !== "") {
           fetchData(searchTitle);
           setSearchTitle("");
         }
     }
 
-
-
-    function fetchData(searchTitle) {
+    function fetchData() {
         fetch(videoURL)
           .then((res) => res.json())
           .then(
@@ -38,6 +38,7 @@ function SearchBar({ result, setResult }) {
       }
     return (
         <div>
+            {errModal && <ErrModal errModal={errModal} closeM={setErrModal}/>}
             <form onSubmit={handleSubmit}>
                 <div className='search'>
                     <input
@@ -47,6 +48,7 @@ function SearchBar({ result, setResult }) {
                      />
                      
                 <button type="submit">Submit</button>
+
             </div>
           </form>
 
