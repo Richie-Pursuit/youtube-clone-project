@@ -67,7 +67,6 @@ function ShowVideo(props) {
 
 
 
-
         <br></br>
         <br></br>
         <button onClick={()=>{setLike(like + 1)}}>😃 Likes {like}</button>
@@ -87,7 +86,6 @@ function ShowVideo(props) {
             )
          })} */}
 
-           <p>PAGEEEE with # { id } </p>
         </div>
     );
 }

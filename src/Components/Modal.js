@@ -13,7 +13,7 @@ import './Modal.css'
 
 function Modal({ closeModal }) {
     let { id } = useParams()
-    let URL =`https://6384e45a8f98a11682c6c6b2--zingy-scone-10412d.netlify.app/videos/${id}`
+    let URL =`https://main--flourishing-lolly-1c0dbf.netlify.app/videos/${id}`
 
 
     return (
