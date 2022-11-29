@@ -37,7 +37,7 @@ function Modal({ closeModal }) {
                     </TumblrShareButton>
                     <br></br>
                     <br></br>
-                    <p className='link'><b>Copy Url:</b> <Link to={URL}>{URL}</Link></p>
+                    <p className='link'><b>Copy Url:</b> <Link to={`/videos/${id}`}>{URL}</Link></p>
 
                 </div>
                 <div className='footer'>
