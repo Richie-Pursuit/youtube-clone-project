@@ -4,6 +4,18 @@ const useFetch= (url) =>{
     const[isPending, setIsPending] = useState(true)
     const [data, setdata] =useState(null)
     const [error, setError] =useState(null)
+    const opts = {
+        videoId: id,
+        autoplay: true,
+        mute: true,
+        controls: true,
+        loop: true,
+        playsInline: true,
+        preload: "auto",
+        width: "640",
+        height: "390",
+        aspectRatio: "16:9",
+      };
 
 
     useEffect(()=>{
